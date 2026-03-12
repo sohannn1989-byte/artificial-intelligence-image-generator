@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>AI Image Generator</title>
 <link rel="stylesheet" href="style.css">
@@ -8,17 +9,24 @@
 <body>
 
 <div class="container">
-<h1>AI Image Generator</h1>
 
-<form id="form">
-<textarea id="prompt" placeholder="Describe your image"></textarea>
-<button type="submit">Generate Image</button>
-</form>
+<h1>🧠 AI Image Generator</h1>
+<p>Generate images from text prompts</p>
+
+<div class="input-box">
+
+<textarea id="prompt" placeholder="Describe your image..."></textarea>
+
+<button onclick="generateImage()">Generate</button>
+
+</div>
 
 <div id="image-container"></div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
+
 </html>
