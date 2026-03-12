@@ -1,13 +1,17 @@
-document.getElementById("form").addEventListener("submit", function(e){
-
-e.preventDefault()
+function generateImage(){
 
 const prompt = document.getElementById("prompt").value
 
 const img = document.createElement("img")
 
-img.src = "https://dummyimage.com/512x512/000/fff&text=" + encodeURIComponent(prompt)
+const query = prompt.trim().replace(/\s+/g, ",")
 
-document.getElementById("image-container").appendChild(img)
+img.src = "https://loremflickr.com/600/400/" + query
 
-})
+const container = document.getElementById("image-container")
+
+container.innerHTML = ""
+
+container.appendChild(img)
+
+}
