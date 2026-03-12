@@ -4,23 +4,15 @@ const prompt = document.getElementById("prompt").value
 
 const container = document.getElementById("image-container")
 
-container.innerHTML = "Generating image..."
+const keyword = prompt.split(" ")[0]   // use first word only
 
 const img = document.createElement("img")
 
-// better image search
-img.src = "https://source.unsplash.com/600x400/?" + encodeURIComponent(prompt)
+img.src = "https://source.unsplash.com/600x400/?" + keyword
 
-img.onload = function(){
 container.innerHTML = ""
+
 container.appendChild(img)
-}
-
-img.onerror = function(){
-container.innerHTML = "Image failed to load. Try another prompt."
-}
-
-}
 
 }
 
